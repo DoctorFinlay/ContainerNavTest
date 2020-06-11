@@ -12,7 +12,7 @@ class TabOneVC: UIViewController, ChildTabDelegate {
 
     @IBOutlet weak var lbl: UILabel!
     
-    var mainDelegate: CustomTabBarDelegate?
+    var mainDelegate: MainPageDelegate?
     var passedInString: String = ""
     
     

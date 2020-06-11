@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A19C522491FC1C00DA1643 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A19C512491FC1C00DA1643 /* TabBarVC.swift */; };
+		00A19C522491FC1C00DA1643 /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A19C512491FC1C00DA1643 /* MainPageVC.swift */; };
 		00A19C542491FC3100DA1643 /* TabOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A19C532491FC3100DA1643 /* TabOneVC.swift */; };
 		00A19C562491FC4200DA1643 /* TabTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A19C552491FC4200DA1643 /* TabTwoVC.swift */; };
 		00A19C582491FC4C00DA1643 /* TabThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A19C572491FC4C00DA1643 /* TabThreeVC.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00A19C512491FC1C00DA1643 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		00A19C512491FC1C00DA1643 /* MainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
 		00A19C532491FC3100DA1643 /* TabOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOneVC.swift; sourceTree = "<group>"; };
 		00A19C552491FC4200DA1643 /* TabTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTwoVC.swift; sourceTree = "<group>"; };
 		00A19C572491FC4C00DA1643 /* TabThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabThreeVC.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				00D5C831249131F900C1A422 /* AppDelegate.swift */,
 				00A19C5F249203AA00DA1643 /* CustomTBC.swift */,
 				00D5C837249131F900C1A422 /* Main.storyboard */,
-				00A19C512491FC1C00DA1643 /* TabBarVC.swift */,
+				00A19C512491FC1C00DA1643 /* MainPageVC.swift */,
 				00D5C83A249131FC00C1A422 /* Assets.xcassets */,
 				00D5C83C249131FC00C1A422 /* LaunchScreen.storyboard */,
 				00D5C83F249131FC00C1A422 /* Info.plist */,
@@ -151,7 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A19C5A2491FC5B00DA1643 /* TabFourVC.swift in Sources */,
-				00A19C522491FC1C00DA1643 /* TabBarVC.swift in Sources */,
+				00A19C522491FC1C00DA1643 /* MainPageVC.swift in Sources */,
 				00D5C832249131F900C1A422 /* AppDelegate.swift in Sources */,
 				00A19C582491FC4C00DA1643 /* TabThreeVC.swift in Sources */,
 				00A19C542491FC3100DA1643 /* TabOneVC.swift in Sources */,

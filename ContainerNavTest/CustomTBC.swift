@@ -10,7 +10,7 @@ import UIKit
 
 class CustomTBC: UITabBarController {
 
-    weak var dele: CustomTabBarDelegate?
+    weak var dele: MainPageDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
