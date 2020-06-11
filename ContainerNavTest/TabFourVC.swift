@@ -8,10 +8,11 @@
 
 import UIKit
 
-class TabFourVC: UIViewController {
+class TabFourVC: UIViewController, ChildTabDelegate {
 
     @IBOutlet weak var lbl: UILabel!
     
+    var mainDelegate: CustomTabBarDelegate?
     var passedInString: String = ""
     
     
@@ -19,9 +20,10 @@ class TabFourVC: UIViewController {
         super.viewDidLoad()
 
         lbl.text = passedInString
-
-        // Do any additional setup after loading the view.
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        mainDelegate?.setMainPageLbl("Set by Tab 4")
+    }
 }

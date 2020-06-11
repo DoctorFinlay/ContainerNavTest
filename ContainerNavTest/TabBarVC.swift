@@ -14,6 +14,7 @@ class TabBarVC: UIViewController {
     
     @IBOutlet weak var tabContainerView: UIView!
     @IBOutlet weak var topContainerHeightCons: NSLayoutConstraint!
+    @IBOutlet weak var mainPageLbl: UILabel!
     
     
     
@@ -41,7 +42,8 @@ class TabBarVC: UIViewController {
                 tabCont.dele = self
                 
                 for viewController in tabCont.viewControllers! {
-                    if let childTab = viewController as? TabOneVC {
+                    if var childTab = viewController as? ChildTabDelegate {
+                        childTab.mainDelegate = self
                         childTab.passedInString = stringToPass
                     }
                     //What does each tab need?
@@ -74,12 +76,25 @@ extension TabBarVC: CustomTabBarDelegate {
             self.view.layoutIfNeeded()
         }
     }
+    
+    
+    func setMainPageLbl(_ str: String) {
+        mainPageLbl.text = str
+    }
+
 }
 
 
 protocol CustomTabBarDelegate: class {
     
     func onTabWasPressed(tabIndex: Int)
+    func setMainPageLbl(_ str: String)
     
 }
 
+
+protocol ChildTabDelegate {
+    
+    var mainDelegate: CustomTabBarDelegate? {get set}
+    var passedInString: String {get set}
+}

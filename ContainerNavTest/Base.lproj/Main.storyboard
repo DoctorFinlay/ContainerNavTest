@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qiq-BS-dg7">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab BarVC-->
+        <!--Navigation Controller-->
+        <scene sceneID="ai1-sn-AgQ">
+            <objects>
+                <navigationController id="Qiq-BS-dg7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mHi-CX-yhv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Yt-yb-q1V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJ6-mE-cCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1477" y="-41"/>
+        </scene>
+        <!--Main Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TabBarVC" customModule="ContainerNavTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,14 +32,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEJ-bu-tn0">
-                                <rect key="frame" x="0.0" y="233" width="414" height="503"/>
+                                <rect key="frame" x="0.0" y="277" width="414" height="459"/>
                                 <connections>
                                     <segue destination="Pgv-NM-hlw" kind="embed" identifier="mainToTabBarController" id="CMC-od-00e"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbh-JC-i6Y">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="233"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="233" id="uQo-Sn-QII"/>
                                 </constraints>
@@ -31,20 +47,31 @@
                                     <segue destination="sHp-mH-Lx5" kind="embed" id="0MQ-PC-inQ"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Page Lbl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-6h-c69">
+                                <rect key="frame" x="20" y="64" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cEJ-bu-tn0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5gz-m8-0qV"/>
                             <constraint firstItem="cEJ-bu-tn0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BDb-wY-DXT"/>
                             <constraint firstItem="cEJ-bu-tn0" firstAttribute="top" secondItem="rbh-JC-i6Y" secondAttribute="bottom" id="PrD-e1-hrq"/>
+                            <constraint firstItem="Nma-6h-c69" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U0q-W1-9sM"/>
                             <constraint firstItem="rbh-JC-i6Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UdH-cg-ePN"/>
                             <constraint firstItem="rbh-JC-i6Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xqs-9d-ur7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cEJ-bu-tn0" secondAttribute="bottom" id="YM4-th-SXE"/>
                             <constraint firstItem="rbh-JC-i6Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kw8-Jd-Ysa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nma-6h-c69" secondAttribute="trailing" constant="20" id="vfS-Lb-oyp"/>
+                            <constraint firstItem="Nma-6h-c69" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zdi-f7-Klc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Main Page" id="ik9-TH-63W"/>
                     <connections>
+                        <outlet property="mainPageLbl" destination="Nma-6h-c69" id="jEu-wD-TbJ"/>
                         <outlet property="tabContainerView" destination="cEJ-bu-tn0" id="FB0-Z3-7xn"/>
                         <outlet property="topContainerHeightCons" destination="uQo-Sn-QII" id="mY3-dp-kNZ"/>
                     </connections>
@@ -58,7 +85,7 @@
             <objects>
                 <viewController id="bIu-ld-mWl" customClass="TabThreeVC" customModule="ContainerNavTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lsy-Y6-UZI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRN-82-w0K">
@@ -90,7 +117,7 @@
             <objects>
                 <viewController id="5eL-ha-UZE" customClass="TabTwoVC" customModule="ContainerNavTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KlZ-VT-uk2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWd-7K-6Mx">
@@ -122,7 +149,7 @@
             <objects>
                 <viewController id="Eoy-JK-86R" customClass="TabFourVC" customModule="ContainerNavTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9qo-o5-zZC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-YB-4VD">
@@ -154,7 +181,7 @@
             <objects>
                 <viewController id="d8O-Qi-97s" customClass="TabOneVC" customModule="ContainerNavTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lm6-sO-Qqb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZS-rU-SCX">
@@ -209,7 +236,21 @@
                     <view key="view" contentMode="scaleToFill" id="LCQ-qD-Pb7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8l-j0-1Gk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X8l-j0-1Gk" secondAttribute="height" multiplier="16:9" id="yeG-YB-4vl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FTc-Nl-ksT" firstAttribute="bottom" secondItem="X8l-j0-1Gk" secondAttribute="bottom" id="BuW-GS-24d"/>
+                            <constraint firstItem="X8l-j0-1Gk" firstAttribute="centerX" secondItem="LCQ-qD-Pb7" secondAttribute="centerX" id="DHU-5G-hdt"/>
+                            <constraint firstItem="X8l-j0-1Gk" firstAttribute="top" secondItem="FTc-Nl-ksT" secondAttribute="top" id="mOq-iM-WFH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FTc-Nl-ksT"/>
                     </view>
                 </viewController>

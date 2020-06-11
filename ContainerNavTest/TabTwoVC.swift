@@ -8,23 +8,24 @@
 
 import UIKit
 
-class TabTwoVC: UIViewController {
-
+class TabTwoVC: UIViewController, ChildTabDelegate {
+    
     @IBOutlet weak var lbl: UILabel!
     
+    var mainDelegate: CustomTabBarDelegate?
     var passedInString: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        lbl.text = passedInString
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        lbl.text = passedInString
+        mainDelegate?.setMainPageLbl("Set by Tab 2")
     }
-
+    
+    
 }

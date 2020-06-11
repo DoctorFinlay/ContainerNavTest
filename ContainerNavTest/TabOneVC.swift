@@ -8,23 +8,23 @@
 
 import UIKit
 
-class TabOneVC: UIViewController {
+class TabOneVC: UIViewController, ChildTabDelegate {
 
     @IBOutlet weak var lbl: UILabel!
     
+    var mainDelegate: CustomTabBarDelegate?
     var passedInString: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
         lbl.text = passedInString
     }
 
+
+    override func viewDidAppear(_ animated: Bool) {
+        mainDelegate?.setMainPageLbl("Set by Tab 1")
+    }
+    
 }
