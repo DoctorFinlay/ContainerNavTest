@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJ6-mE-cCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-845" y="-27"/>
+            <point key="canvasLocation" x="-972" y="67"/>
         </scene>
         <!--Main Page-->
         <scene sceneID="tne-QT-ifu">
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="129" y="67"/>
         </scene>
         <!--Tab 3-->
         <scene sceneID="ciY-FC-fv6">
@@ -103,14 +103,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bg6-4O-r4A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tab 3" id="7kz-1R-QnC"/>
+                    <tabBarItem key="tabBarItem" title="Tab 3" image="person" catalog="system" id="7kz-1R-QnC"/>
                     <connections>
                         <outlet property="lbl" destination="bRN-82-w0K" id="KXc-6p-lhZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5a-D7-yDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="885"/>
+            <point key="canvasLocation" x="1314" y="894"/>
         </scene>
         <!--Tab 2-->
         <scene sceneID="Jiq-F1-4We">
@@ -135,14 +135,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EUA-JG-Wpc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tab 2" id="rVl-Ox-L56"/>
+                    <tabBarItem key="tabBarItem" title="Tab 2" image="doc.plaintext" catalog="system" id="rVl-Ox-L56"/>
                     <connections>
                         <outlet property="lbl" destination="LWd-7K-6Mx" id="IKv-C2-O2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJD-xo-aio" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="325"/>
+            <point key="canvasLocation" x="577" y="894"/>
         </scene>
         <!--Tab 4-->
         <scene sceneID="sCc-1P-lXo">
@@ -167,14 +167,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dDv-jz-v0P"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tab 4" id="GFs-zr-oEX"/>
+                    <tabBarItem key="tabBarItem" title="Tab 4" image="globe" catalog="system" id="GFs-zr-oEX"/>
                     <connections>
                         <outlet property="lbl" destination="TGf-YB-4VD" id="GXa-GU-l2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCP-Fm-vml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="865"/>
+            <point key="canvasLocation" x="2062" y="894"/>
         </scene>
         <!--Tab 1-->
         <scene sceneID="Bv6-Q5-HHq">
@@ -200,13 +200,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mmC-Bq-crf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tab 1" id="3gv-wk-c8e"/>
+                    <tabBarItem key="tabBarItem" title="Tab 1" image="book" catalog="system" id="3gv-wk-c8e"/>
                     <connections>
                         <outlet property="lbl" destination="GZS-rU-SCX" id="IEG-XY-8Hh"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1943" y="-139"/>
+            <point key="canvasLocation" x="-155" y="894"/>
         </scene>
         <!--CustomTBC-->
         <scene sceneID="bN5-mU-sDs">
@@ -256,7 +256,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mw5-9f-s8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="-333"/>
+            <point key="canvasLocation" x="954" y="-202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
 </document>
